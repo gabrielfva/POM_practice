@@ -21,4 +21,9 @@ public class BCLogin {
         HomePage homePage = new HomePage(driver);
         return homePage.getProductsTitle().getText();
     }
+
+    public static String getMessageBlockedUser(WebDriver driver){
+        LoginPage loginPage = new LoginPage(driver);
+        return loginPage.getMsgBlockedUser().getText();
+    }
 }

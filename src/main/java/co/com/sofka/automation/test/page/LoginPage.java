@@ -17,6 +17,9 @@ public class LoginPage {
     @FindBy(how = How.ID, using = "login-button")
     public WebElement btnLogin;
 
+    @FindBy(how = How.XPATH, using = "//div[@class='error-message-container error']/h3")
+    WebElement msgBlockedUser;
+
     public LoginPage(WebDriver driver){
         PageFactory.initElements(driver, this);
     }
@@ -31,5 +34,9 @@ public class LoginPage {
 
     public WebElement getBtnLogin() {
         return btnLogin;
+    }
+
+    public WebElement getMsgBlockedUser() {
+        return msgBlockedUser;
     }
 }
