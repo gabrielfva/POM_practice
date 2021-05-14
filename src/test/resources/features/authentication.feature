@@ -1,3 +1,6 @@
+#Autor: gabrielfva
+#email: gabrielfva@gmail.com
+
 Feature: User authentication in souce demo web site
   As a user of the Sauce Store platform
   I want to login
