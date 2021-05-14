@@ -6,12 +6,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage {
+public class InventoryPage {
 
     @FindBy(how = How.XPATH, using = "//*[@class='title']")
     private WebElement productsTitle;
 
-    public HomePage(WebDriver driver){
+    public InventoryPage(WebDriver driver){
         PageFactory.initElements(driver, this);
     }
 

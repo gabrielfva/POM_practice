@@ -1,6 +1,6 @@
 package co.com.sofka.automation.test.controller;
 
-import co.com.sofka.automation.test.page.HomePage;
+import co.com.sofka.automation.test.page.InventoryPage;
 import co.com.sofka.automation.test.page.LoginPage;
 import org.openqa.selenium.WebDriver;
 
@@ -18,7 +18,7 @@ public class BCLogin {
     }
 
     public static String getTitleHomePage(WebDriver driver){
-        HomePage homePage = new HomePage(driver);
+        InventoryPage homePage = new InventoryPage(driver);
         return homePage.getProductsTitle().getText();
     }
 
