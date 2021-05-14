@@ -3,7 +3,6 @@ package pom.steps;
 import co.com.sofka.automation.test.controller.BCLogin;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 import static co.com.sofka.automation.test.utils.Constants.LBL_PRODUCTS;
@@ -15,11 +14,6 @@ public class AuthenticationStep {
     @Given("that Nicolas is on Sauce Demo home page")
     public void thatNicolasIsOnSauceDemoHomePage() {
         BCLogin.openBrowser(URL_SAUCESTORE, driver);
-    }
-
-    @When("he enters his {string} and {string}")
-    public void heEntersHisAnd(String user, String password) {
-        BCLogin.login(driver, user, password);
     }
 
     @Then("he should log in correctly")
