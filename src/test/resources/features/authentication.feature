@@ -18,9 +18,9 @@ Feature: User authentication in souce demo web site
       | problem_user  | secret_sauce       |
       | performance_glitch_user | secret_sauce|
 
-    Scenario Outline: login with blocked user
-      When he enters his "<user>" and "<password>"
-      Then he should see the message: "Epic sadface: Sorry, this user has been locked out."
-      Examples:
-        | user           | password        |
-        |locked_out_user | secret_sauce    |
+#    Scenario Outline: login with blocked user
+#      When he enters his "<user>" and "<password>"
+#      Then he should see the message: "Epic sadface: Sorry, this user has been locked out."
+#      Examples:
+#        | user           | password        |
+#        |locked_out_user | secret_sauce    |

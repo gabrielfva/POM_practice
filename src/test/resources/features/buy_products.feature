@@ -9,19 +9,24 @@ Feature: buy products from the Sauce Store
   Background:
     Given that Nicolas wants to buy a product from the store
 
-  Scenario Outline: See all the available products
+#  Scenario Outline: See all the available products
+#    When he enters his "<user>" and "<password>"
+#    Then he should see all the available products in the virtual store
+#
+#    Examples:
+#      | user          | password           |
+#      | standard_user | secret_sauce       |
+
+  Scenario Outline: Buy some products
     When he enters his "<user>" and "<password>"
-    Then he should see all the available products in the virtual store
+    And choose the products he wants to buy
+    And provides his personal information
+    Then he should be able to buy the products
 
     Examples:
       | user          | password           |
       | standard_user | secret_sauce       |
 
-#  Scenario: Buy some products
-#    And choose the products he wants to buy
-#    And provides his personal information
-#    Then he should be able to buy the products
-#
 #  Scenario: Compare products prices
 #    And choose the products he wants to buy
 #    And provides his personal information

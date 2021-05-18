@@ -17,6 +17,9 @@ public class InventoryPage {
     @FindBys(@FindBy(xpath = "//div[@class='pricebar']/button"))
     List<WebElement> products;
 
+    @FindBy(className = "shopping_cart_link")
+    WebElement shoppinCartContainer;
+
     public InventoryPage(WebDriver driver){
         PageFactory.initElements(driver, this);
     }
@@ -27,5 +30,9 @@ public class InventoryPage {
 
     public List<WebElement> getProducts() {
         return products;
+    }
+
+    public WebElement getShoppinCartContainer() {
+        return shoppinCartContainer;
     }
 }
