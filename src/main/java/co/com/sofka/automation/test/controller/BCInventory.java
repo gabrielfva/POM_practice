@@ -3,6 +3,7 @@ package co.com.sofka.automation.test.controller;
 import co.com.sofka.automation.test.page.*;
 import co.com.sofka.automation.test.utils.PurchaseLogic;
 import com.github.javafaker.Faker;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -20,6 +21,7 @@ public class BCInventory {
     public static void clickOnChoosedProductsToBuy(WebDriver driver, List<WebElement> selectedProducts){
         PurchaseLogic purchaseLogic = new PurchaseLogic();
         InventoryPage inventoryPage = new InventoryPage(driver);
+
         for (WebElement selectedProduct : selectedProducts){
             selectedProduct.click();
         }
@@ -57,5 +59,10 @@ public class BCInventory {
     public static String orderConfirmed(WebDriver driver){
         CheckoutCompletePage checkoutComplete = new CheckoutCompletePage(driver);
         return checkoutComplete.getMsgPurchase().getText();
+    }
+
+    public static void scrollUp(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0, -3000)");
     }
 }

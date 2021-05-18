@@ -2,7 +2,6 @@ package pom.steps;
 
 import co.com.sofka.automation.test.controller.BCInventory;
 import co.com.sofka.automation.test.controller.BCLogin;
-import co.com.sofka.automation.test.page.CheckoutCompletePage;
 import co.com.sofka.automation.test.utils.PurchaseLogic;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -41,6 +40,7 @@ public class BuyProductsStep {
 
     @Then("he should be able to buy the products")
     public void heShouldBeAbleToBuyTheProducts() {
+        BCInventory.scrollUp(driver);
         Assert.assertEquals(BCInventory.orderConfirmed(driver), PURCHASE_MESSAGE);;
     }
 }
